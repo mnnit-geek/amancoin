@@ -6,7 +6,7 @@ pragma solidity ^0.4.24;
 // Ticker      : AMAN
 // Name        : amancoin
 // Total supply: Unlimited
-// Decimals    : 10
+// Decimals    : 18
 // ----------------------------------------------------------------------------
 
 // Safe Math Operations
@@ -96,7 +96,7 @@ contract amancoin is ERC20Interface, Owned, SafeMath {  // Change this
     function amancoin() public {  // Change this
         symbol = "AMAN";          // Change this
         name = "amancoin";        // Change this
-        decimals = 10;
+        decimals = 18;
         bonusEnds = now + 2 weeks;  // Bonus get double the amount for initial 2 weeks
         endDate = now + 8 weeks;
 
@@ -203,4 +203,3 @@ contract amancoin is ERC20Interface, Owned, SafeMath {  // Change this
         return ERC20Interface(tokenAddress).transfer(owner, tokens);
     }
 }
-
